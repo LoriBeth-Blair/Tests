@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Simple Proportion Solver</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Simple Proportion Solver</h1>
+        <p>
+        <form onsubmit="solveProportion()">
+        <table>
+            <tr> 
+                <td>Enter 3 values to solve for the 4th</td>
+            </tr>
+            <tr>
+                <td><input id="numerator1" type="number" name="numerator1"></td>
+                <td><input id="numerator2" type="number" name="numerator2"></td>
+            </tr>
+            <tr>
+                <td><input id="denominator1" type="number" name="denominator1"></td>
+                <td><input id="denominator2" type="number" name="denominator2"></td>
+            <tr>
+                <td>Submit</td>
+            </tr>
+            <tr>
+                <td><input type="Submit" value="Submit"></td>
+            </tr>
+        </table>
+        </form>
+        </p>
+        
+    <script> 
+        
+        function solveProportion() {
+            var num1;
+            var den1;
+            var num2;
+            var den2;
+           
+            num1 = document.getElementById("numerator1").value;
+            den1 = document.getElementById("denominator1").value;
+            num2 = document.getElementById("numerator2").value;
+            den2 = document.getElementById("denominator2").value;
+        
+            if (!num1) {
+            num1 = (num2 / den2) * den1;
+            alert(num1);
+            } else if (!den1) {
+                den1 = (num1 * den2) / num2;
+                alert(den1);
+            } else if (!num2) {
+                num2 = (num1 * den2) / den1;
+                alert(num2);
+            } else if (!den2) {
+                den2 = (den1 * num2) / num1;
+                alert(den2);
+                } else {
+                  alert("You dun goofed");  
+                }
+                    
+        }
+            
+    </script>
+    
+    <p>
+       On a totally unrelated note, if you want to opt in to receive my silly emails about animals <a href="http://analytics.clickdimensions.com/clickdimensionscom-ajsmq/pages/bssmplfseeaa8lbl84opcq.html">click this link </a> and subscribe
+    </p>
+    
+    <script type="text/javascript"> 
+  var cdJsHost = (("https:" == document.location.protocol) ? "https://" : "http://"); 
+  document.write(unescape("%3Cscript src='" + cdJsHost + "analytics.clickdimensions.com/ts.js' type='text/javascript'%3E%3C/script%3E")); 
+</script> 
+
+<script type="text/javascript"> 
+  var cdAnalytics = new clickdimensions.Analytics('analytics.clickdimensions.com'); 
+  cdAnalytics.setAccountKey('aJsMqNrCPLEOOllqllyect'); 
+  cdAnalytics.setDomain('loribeth-blair.github.io'); 
+  cdAnalytics.setScore(typeof(cdScore) == "undefined" ? 0 : (cdScore == 0 ? null : cdScore)); 
+  cdAnalytics.trackPage(); 
+</script> 
+    
+
+    
+    </body>
+</html>
